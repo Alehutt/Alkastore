@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALKA STORE - Sua Melhor Experiência IPTV</title>
+    <title>ALKA STORE - Streaming de Alta Qualidade</title>
     <style>
         /* Estilo Geral */
         body {
@@ -12,34 +12,45 @@
             padding: 0;
             background: #121212;
             color: #fff;
+            overflow-x: hidden;
         }
 
         /* Cabeçalho */
         header {
-            background: linear-gradient(90deg, #b30000, #ff1a1a);
-            padding: 20px;
+            background: linear-gradient(135deg, #b30000, #ff1a1a, #b30000);
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 26, 26, 0.3);
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 48px;
             margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         header p {
             font-size: 20px;
-            margin: 5px 0 0;
+            margin: 10px 0 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* Seção Principal */
         .container {
-            padding: 30px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         .container h2 {
             font-size: 36px;
             margin-bottom: 20px;
+            color: #ff1a1a;
+            animation: slideIn 1s ease-in-out;
         }
 
         .container p {
@@ -47,42 +58,51 @@
             line-height: 1.8;
             margin: 10px 0;
             color: #ccc;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
         /* Seção de Planos */
         .plans {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
-            margin: 30px 0;
+            margin: 40px 0;
         }
 
         .plan {
             background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-            width: 250px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 280px;
             text-align: center;
+            cursor: pointer;
+            animation: fadeInUp 1s ease-in-out;
         }
 
         .plan:hover {
-            transform: scale(1.1);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(255, 26, 26, 0.4);
         }
 
         .plan h3 {
-            font-size: 24px;
+            font-size: 28px;
             color: #ff4747;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .plan .price {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
             color: #ff1a1a;
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
         .plan p {
@@ -92,19 +112,47 @@
 
         .plan .button {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
+            margin-top: 20px;
+            padding: 12px 25px;
             background: #b30000;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             font-size: 16px;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.3s;
         }
 
         .plan .button:hover {
             background: #ff1a1a;
+            transform: scale(1.05);
+        }
+
+        /* Descrição ao clicar no botão */
+        .description {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ccc;
+            text-align: left;
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .description p {
+            line-height: 1.6;
+        }
+
+        .description a {
+            color: #ff1a1a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .description a:hover {
+            text-decoration: underline;
         }
 
         /* Botão Principal */
@@ -131,7 +179,7 @@
             background: #181818;
             padding: 20px;
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         footer p {
@@ -144,54 +192,181 @@
             color: #ff4747;
             font-weight: bold;
         }
+
+        /* Botão de Voltar ao Topo */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff1a1a;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px;
+            display: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .back-to-top:hover {
+            background: #b30000;
+            transform: scale(1.1);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .container h2 {
+                font-size: 28px;
+            }
+
+            .plan {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
     </style>
+    <script>
+        function showDescription(service) {
+            // Esconde todas as descrições
+            const descriptions = document.querySelectorAll('.description');
+            descriptions.forEach(function(description) {
+                description.style.display = 'none';
+            });
+
+            // Exibe a descrição do serviço clicado
+            const description = document.getElementById(service);
+            description.style.display = 'block';
+        }
+
+        // Botão de Voltar ao Topo
+        window.onscroll = function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+    </script>
 </head>
 <body>
     <header>
         <h1>Bem-vindo à ALKA STORE</h1>
-        <p>Transformando sua experiência com IPTV!</p>
+        <p>Transformando sua experiência com os melhores serviços de Streaming!</p>
     </header>
 
     <div class="container">
-        <h2>Por que escolher nossa IPTV?</h2>
-        <p>Tenha acesso aos melhores canais, filmes e séries em alta definição, com suporte de qualidade e preços acessíveis.</p>
+        <h2>Escolha seu Serviço de Streaming</h2>
+        <p>Temos os melhores preços para você aproveitar os melhores conteúdos!</p>
 
-        <h2>Escolha o seu plano</h2>
         <div class="plans">
-            <div class="plan">
-                <h3>Plano Básico</h3>
-                <p>Ideal para uso individual.</p>
-                <p class="price">R$ 25</p>
-                <a href="#" class="button">Assinar Agora</a>
+            <div class="plan" onclick="showDescription('netflix')">
+                <h3>🎬 Netflix</h3>
+                <p>A melhor plataforma de filmes e séries.</p>
+                <p class="price">R$ 16,00</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20na%20Netflix" class="button" target="_blank">Assinar Agora</a>
             </div>
-            <div class="plan">
-                <h3>Plano Essencial</h3>
-                <p>Mais benefícios por um preço justo.</p>
-                <p class="price">R$ 30</p>
-                <a href="#" class="button">Assinar Agora</a>
+            <div class="plan" onclick="showDescription('primevideo')">
+                <h3>📺 Prime Video</h3>
+                <p>Assista aos lançamentos exclusivos.</p>
+                <p class="price">R$ 3,00</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Prime%20Video" class="button" target="_blank">Assinar Agora</a>
             </div>
-            <div class="plan">
-                <h3>Plano Premium</h3>
-                <p>Alta definição e canais extras.</p>
-                <p class="price">R$ 50</p>
-                <a href="#" class="button">Assinar Agora</a>
+            <div class="plan" onclick="showDescription('hbo')">
+                <h3>📺 HBO Max</h3>
+                <p>O melhor do entretenimento para toda a família.</p>
+                <p class="price">R$ 3,00</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20HBO%20Max" class="button" target="_blank">Assinar Agora</a>
             </div>
-            <div class="plan">
-                <h3>Plano Família</h3>
-                <p>Para até 5 usuários simultâneos.</p>
-                <p class="price">R$ 100</p>
-                <a href="#" class="button">Assinar Agora</a>
+            <div class="plan" onclick="showDescription('disneyplus')">
+                <h3>🌟 Disney+ & Star+</h3>
+                <p>O mundo Disney e muito mais!</p>
+                <p class="price">R$ 9,00</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Disney%2B%20e%20Star%2B" class="button" target="_blank">Assinar Agora</a>
+            </div>
+            <div class="plan" onclick="showDescription('youtube')">
+                <h3>🎵 YouTube Premium</h3>
+                <p>Assista sem anúncios e aproveite todos os recursos.</p>
+                <p class="price">R$ 8,00</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20YouTube%20Premium" class="button" target="_blank">Assinar Agora</a>
+            </div>
+            <div class="plan" onclick="showDescription('crunchyroll')">
+                <h3>🎥 Crunchyroll</h3>
+                <p>Os melhores animes em alta definição.</p>
+                <p class="price">R$ 1,50</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Crunchyroll" class="button" target="_blank">Assinar Agora</a>
+            </div>
+            <div class="plan" onclick="showDescription('canva')">
+                <h3>🎨 Canva Pro</h3>
+                <p>Crie designs incríveis com facilidade.</p>
+                <p class="price">R$ 3,00</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Canva%20Pro" class="button" target="_blank">Assinar Agora</a>
+            </div>
+            <div class="plan" onclick="showDescription('paramount')">
+                <h3>🎬 Paramount+</h3>
+                <p>Assista a filmes e séries incríveis.</p>
+                <p class="price">R$ 2,00</p>
+                <a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Paramount%2B" class="button" target="_blank">Assinar Agora</a>
             </div>
         </div>
 
-        <h2>Entre no nosso grupo!</h2>
-        <p>Clique no botão abaixo para mais informações e suporte direto:</p>
-        <a href="https://chat.whatsapp.com/DpYlExJhkWYG2Du2KmegMv" class="main-button" target="_blank">Entrar no Grupo</a>
+        <!-- Descrições -->
+        <div id="netflix" class="description">
+            <h3>🎬 Netflix</h3>
+            <p>A Netflix oferece uma vasta coleção de filmes, séries, documentários e conteúdos exclusivos. Com uma interface intuitiva e um enorme catálogo, a Netflix é a plataforma ideal para quem busca diversão sem fim.</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20na%20Netflix" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
+        <div id="primevideo" class="description">
+            <h3>📺 Prime Video</h3>
+            <p>O Prime Video oferece séries originais, filmes de sucesso e muito mais. Com uma grande variedade de conteúdos exclusivos e parcerias com estúdios renomados, o Prime Video é uma excelente opção de streaming.</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Prime%20Video" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
+        <div id="hbo" class="description">
+            <h3>📺 HBO Max</h3>
+            <p>A HBO Max traz o melhor do entretenimento mundial, com filmes premiados, séries icônicas e produções originais. A qualidade dos conteúdos e a experiência única garantem horas de diversão.</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20HBO%20Max" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
+        <div id="disneyplus" class="description">
+            <h3>🌟 Disney+ & Star+</h3>
+            <p>Assista aos maiores sucessos da Disney, Pixar, Marvel, Star Wars e muito mais, além de conteúdos exclusivos com Star+. Uma combinação de entretenimento para todas as idades!</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Disney%2B%20e%20Star%2B" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
+        <div id="youtube" class="description">
+            <h3>🎵 YouTube Premium</h3>
+            <p>Com o YouTube Premium, você pode assistir vídeos sem interrupções de anúncios, aproveitar o YouTube Music sem anúncios, e baixar vídeos para assistir offline, além de outros benefícios exclusivos.</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20YouTube%20Premium" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
+        <div id="crunchyroll" class="description">
+            <h3>🎥 Crunchyroll</h3>
+            <p>O Crunchyroll é a principal plataforma de streaming de animes, com milhares de títulos para os fãs de animes. Com uma excelente qualidade de vídeo e atualizações rápidas, oferece uma vasta coleção para maratonar.</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Crunchyroll" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
+        <div id="canva" class="description">
+            <h3>🎨 Canva Pro</h3>
+            <p>O Canva Pro é uma ferramenta online de design gráfico com modelos prontos, fotos e vídeos de alta qualidade para criar apresentações, posts para redes sociais, convites, e muito mais. É ideal para quem precisa criar designs de forma fácil e rápida.</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Canva%20Pro" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
+        <div id="paramount" class="description">
+            <h3>🎬 Paramount+</h3>
+            <p>Paramount+ oferece uma grande variedade de filmes, séries e shows da Paramount, incluindo produções exclusivas, clássicos do cinema e lançamentos da TV. Perfeito para quem é fã de entretenimento de qualidade!</p>
+            <p><a href="https://wa.me/91981838451?text=Olá,%20Estou%20interessado%20no%20Paramount%2B" target="_blank">Clique aqui para assinar agora!</a></p>
+        </div>
     </div>
 
     <footer>
         <p>Site desenvolvido por <span class="creator">ALKA STORE</span></p>
         <p>Todos os direitos reservados © 2025</p>
     </footer>
+
+    <!-- Botão de Voltar ao Topo -->
+    <a href="#" class="back-to-top">↑</a>
 </body>
 </html>
