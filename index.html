@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALKA STORE - Streaming de Alta Qualidade</title>
+    <title>ALKA STORE - Streaming Profissional</title>
     <style>
         /* Estilo Geral */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #121212;
+            background: #0a0a0a;
             color: #fff;
             overflow-x: hidden;
         }
@@ -18,7 +18,7 @@
         /* Cabeçalho */
         header {
             background: linear-gradient(135deg, #b30000, #ff1a1a, #b30000);
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
             box-shadow: 0 4px 15px rgba(255, 26, 26, 0.3);
         }
@@ -155,31 +155,86 @@
             text-decoration: underline;
         }
 
-        /* Botão Principal */
-        .main-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #ff1a1a;
-            color: #fff;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+        /* Seção de Depoimentos */
+        .testimonials {
+            background: #1e1e1e;
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        .main-button:hover {
-            transform: scale(1.1);
-            background: #b30000;
+        .testimonials h2 {
+            font-size: 36px;
+            color: #ff1a1a;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .testimonial .author {
+            font-weight: bold;
+            color: #ff4747;
+            margin-top: 10px;
+        }
+
+        /* Seção de Blog */
+        .blog {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .blog h2 {
+            font-size: 36px;
+            color: #ff1a1a;
+            margin-bottom: 30px;
+        }
+
+        .blog-post {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .blog-post h3 {
+            font-size: 24px;
+            color: #ff4747;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .blog-post a {
+            color: #ff1a1a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .blog-post a:hover {
+            text-decoration: underline;
         }
 
         /* Rodapé */
         footer {
             background: #181818;
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
-            margin-top: 40px;
         }
 
         footer p {
@@ -191,6 +246,21 @@
         footer .creator {
             color: #ff4747;
             font-weight: bold;
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff1a1a;
         }
 
         /* Botão de Voltar ao Topo */
@@ -259,7 +329,7 @@
 </head>
 <body>
     <header>
-        <h1>Bem-vindo à ALKA STORE</h1>
+        <h1>ALKA STORE</h1>
         <p>Transformando sua experiência com os melhores serviços de Streaming!</p>
     </header>
 
@@ -361,10 +431,96 @@
         </div>
     </div>
 
-    <footer>
-        <p>Site desenvolvido por <span class="creator">ALKA STORE</span></p>
-        <p>Todos os direitos reservados © 2025</p>
-    </footer>
+  <!-- Seção de Depoimentos -->
+<section class="testimonials">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="testimonials-container">
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="João Silva">
+            <p>"Adorei o serviço da ALKA STORE! A Netflix funciona perfeitamente, e o suporte é incrível."</p>
+            <p class="author">- João Silva</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Maria Souza">
+            <p>"Ótimos preços e atendimento rápido. Recomendo a todos!"</p>
+            <p class="author">- Maria Souza</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Carlos Mendes">
+            <p>"Serviço confiável e seguro. Estou muito satisfeito com minha assinatura!"</p>
+            <p class="author">- Carlos Mendes</p>
+        </div>
+    </div>
+</section>
+
+<!-- Estilos CSS -->
+<style>
+    .testimonials {
+        text-align: center;
+        background-color: #111;
+        color: white;
+        padding: 50px 20px;
+    }
+    .testimonials h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: red;
+    }
+    .testimonials-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .testimonial {
+        background: #222;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        text-align: center;
+    }
+    .testimonial img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    .testimonial p {
+        font-size: 16px;
+    }
+    .author {
+        font-weight: bold;
+        color: red;
+    }
+</style>
+
+    <!-- Seção de Blog -->
+    <div class="blog">
+        <h2>Últimas do Blog</h2>
+        <div class="blog-post">
+            <h3>Dicas para aproveitar ao máximo o Disney+</h3>
+            <p>Confira algumas dicas para aproveitar todos os recursos do Disney+ e Star+.</p>
+            <a href="#">Leia mais</a>
+        </div>
+        <div class="blog-post">
+            <h3>Os melhores animes do Crunchyroll</h3>
+            <p>Descubra os animes mais populares do momento no Crunchyroll.</p>
+            <a href="#">Leia mais</a>
+        </div>
+    </div>
+
+<!-- Rodapé -->
+<footer style="background-color: #111; color: white; text-align: center; padding: 20px;">
+    <div class="social-icons">
+        <a href="https://www.instagram.com/alkastore_oficial/" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; color: white; font-size: 18px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" width="30" height="30">
+            <span>@alkastore_oficial</span>
+        </a>
+    </div>
+    <p>Site desenvolvido por <span style="font-weight: bold; color: red;">ALKA STORE</span></p>
+    <p>Todos os direitos reservados © 2025</p>
+</footer>
 
     <!-- Botão de Voltar ao Topo -->
     <a href="#" class="back-to-top">↑</a>
